@@ -1,0 +1,45 @@
+﻿# .NET MAUI
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.sln.docstates
+
+# Visual Studio
+.vs/
+.vscode/
+.vscode-test/
+
+# User-specific files
+*.rsuser
+*.sln.ide
+*.sln.docstates
+
+# Auto-generated files
+Generated_Code/
+
+# Build results
+build/
+BuildArtifacts/
+
+# Logs
+*.log
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Environment variables
+.env
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
