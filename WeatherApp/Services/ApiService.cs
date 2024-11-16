@@ -14,7 +14,7 @@ namespace WeatherApp.Services
     {
         public static async Task<Root> GetWeather(double latitude, double longitude) {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&units=metric&appid=ee3f5390f325c571f832c0aae24d3a71", latitude, longitude));
+            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?lat={0}&lon={1}&units=metric&appid={your_api_key}", latitude, longitude));
 #pragma warning disable CS8603
             return JsonConvert.DeserializeObject<Root>(response);
 #pragma warning restore CS8603
@@ -24,7 +24,7 @@ namespace WeatherApp.Services
 
         public static async Task<Root> GetWeatherByCity(string city) {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&appid=ee3f5390f325c571f832c0aae24d3a71", city));
+            var response = await httpClient.GetStringAsync(string.Format("https://api.openweathermap.org/data/2.5/forecast?q={0}&units=metric&appid={your_api_key}", city));
 #pragma warning disable CS8603
             return JsonConvert.DeserializeObject<Root>(response);
 #pragma warning restore CS8603
